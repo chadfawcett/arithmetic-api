@@ -1,0 +1,32 @@
+{
+  "name": "arithmetic-api",
+  "version": "1.0.0",
+  "description": "Compute all the things (+-)",
+  "scripts": {
+    "start": "node build/server.js",
+    "build": "babel src -d build",
+    "watch": "npm run build -- -w",
+    "test": "npm run test:unit && npm run test:int",
+    "test:unit": "mocha \"./build/**/*.unit.js\"",
+    "test:int": "mocha \"./build/test/**/*.int.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chadfawcett/semaphore-talk.git"
+  },
+  "author": "Chad Fawcett <me@chadf.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chadfawcett/semaphore-talk/issues"
+  },
+  "homepage": "https://github.com/chadfawcett/semaphore-talk#readme",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "mocha": "^3.1.2",
+    "superagent": "^2.3.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
