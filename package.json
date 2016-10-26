@@ -6,6 +6,7 @@
     "start": "node build/server.js",
     "build": "babel src -d build",
     "watch": "npm run build -- -w",
+    "postinstall": "npm run build",
     "test": "npm run test:unit && npm run test:int",
     "test:unit": "mocha \"./build/**/*.unit.js\"",
     "test:int": "mocha \"./build/test/**/*.int.js\""
@@ -28,5 +29,8 @@
   },
   "dependencies": {
     "express": "^4.14.0"
+  },
+  "engines": {
+    "node": "4.4.5"
   }
 }
